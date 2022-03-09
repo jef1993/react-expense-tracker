@@ -1,0 +1,14 @@
+.expense {
+  border-radius: 1rem;
+  background-color: rgb(36, 48, 48);
+  margin-top: 2rem;
+  &__control {
+    height: 15rem;
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+}

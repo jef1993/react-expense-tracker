@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.03em;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  background-color: $color-primary;
+}
+
+input {
+  height: 3.6rem;
+  border-radius: 0.5rem;
+  border-style: none;
+  width: 30rem;
+  margin: 0;
+  padding: 0 1rem;
+  font-size: 1.6rem;
+
+  &:focus {
+    border: none;
+  }
+}
+
+button {
+  height: 3.2rem;
+  padding: 0em 2em;
+  font-size: 1.6rem;
+}
+
+#root {
+  @include flexCenter(column);
+  margin: 2rem 0;
+}
