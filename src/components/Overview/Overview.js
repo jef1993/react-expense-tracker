@@ -8,9 +8,10 @@ function Overview(props) {
         <div className="overview__meter">
           <div className="overview__meter--outer">
             <div className="overview__meter--inner">
-              <div className="overview__total">£{props.amount}
-              <p className="overview__letter">Total</p></div>
-              
+              <div className="overview__total">
+                £{props.amount}
+                <p className="overview__letter">Total</p>
+              </div>
             </div>
           </div>
         </div>

@@ -6,7 +6,9 @@ function Expense(props) {
         <div className="expense__date">{props.date}</div>
       </div>
       <div className="expense__right">
-        <button className="expense__delete">Delete X</button>
+        <button className="expense__delete">
+          <span>Delete</span> X
+        </button>
         <div className="expense__amount">£ {props.amount}</div>
       </div>
     </div>

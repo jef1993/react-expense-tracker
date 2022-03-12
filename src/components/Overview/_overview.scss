@@ -1,7 +1,16 @@
 .overview {
   grid-area: 2/2 / span 1 / span 1;
+  @media screen and (max-width: 900px) {
+    grid-area: 2/1 / span 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   &__header {
     margin-top: 1rem;
+    @media screen and (max-width: 900px) {
+      width: $container-width-l;
+    }
   }
 
   &__container {
@@ -9,18 +18,21 @@
     background-color: $color-grey-mid;
     width: $container-width-s;
     height: $container-height-s;
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
   }
 
   &__meter {
+    padding-left: 2rem;
+
     &--outer {
       height: 20rem;
       width: 20rem;
       border-radius: 100rem;
       background-color: $color-black;
       @include flexCenter(row);
+      margin: 0;
     }
 
     &--inner {
@@ -51,7 +63,8 @@
 }
 
 .group {
-  width: 18rem;
+  padding: 0 2rem;
+  max-width: 20rem;
   &:not(:last-child) {
     margin-bottom: 1rem;
   }

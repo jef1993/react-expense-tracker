@@ -10,7 +10,7 @@ function CreateExpense() {
           <Input name="amount" type="number" placeholder="amount" />
           <Input name="date" type="date" placeholder="" />
           <div className="create-expense__group">
-            <label for="group">Group</label>
+            <label htmlFor="group">Group</label>
             <select
               name="group"
               id="group"

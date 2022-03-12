@@ -1,6 +1,7 @@
 .input {
   display: flex;
   flex-direction: column;
+  padding: 0 2rem;
   color-scheme: dark;
   gap: 0.5rem 0;
 
@@ -11,9 +12,10 @@
 
   &__box {
     border: none;
-    background-color: $color-grey-dark !important;
+    background-color: $color-grey-dark;
     color: $color-white;
     width: inherit;
+    max-width: 80vw;
 
     &:focus,
     &:required {

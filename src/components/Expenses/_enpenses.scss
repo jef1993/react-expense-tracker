@@ -1,5 +1,12 @@
 .expenses {
   grid-area: 3/1 / span 1 / span 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (max-width: 900px) {
+    grid-area: 4/1 / span 1 / span 1;
+  }
 
   &__header-box {
     margin-top: 2rem;
@@ -7,6 +14,7 @@
     align-items: center;
     justify-content: space-between;
     height: 3rem;
+    width: $container-width-l;
   }
 
   &__total {
@@ -59,6 +67,13 @@
 
   &__delete {
     @include btn-s;
+    & span {
+      font-weight: $font-semibold;
+
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+    }
   }
 
   &__amount {

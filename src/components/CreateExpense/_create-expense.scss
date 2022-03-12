@@ -1,8 +1,19 @@
 .create-expense {
   grid-area: 3/2 / span 1 / span 1;
 
+  @media screen and (max-width: 900px) {
+    grid-area: 5/1 / span 1 / span 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__header {
     margin-top: 2rem;
+
+    @media screen and (max-width: 900px) {
+      width: $container-width-l;
+    }
   }
 
   &__container {
@@ -11,27 +22,51 @@
     background-color: $color-grey-mid;
     border-radius: 1.5rem;
     @include flexCenter(column);
+
+    @media screen and (max-width: 900px) {
+      width: $container-width-l;
+      height: $container-height-s;
+    }
+
+    @media screen and (max-width: 600px) {
+      height: $container-height-l;
+    }
   }
 
   &__form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    @media screen and (max-width: 900px) {
+      width: $container-width-l;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 600px) {
+      grid-template-columns: 1fr;
+    }
+
     gap: 1.5rem;
-    width: 40rem;
+    width: $container-width-s;
   }
 
   &__group {
     display: flex;
     flex-direction: column;
     font-size: $font-size-s;
+    padding: 0 2rem;
     gap: 0.5rem;
+
+    @media screen and (max-width: 900px) {
+      padding: 0 2rem;
+    }
   }
 
   &__selector {
     @include input-1;
     background-color: $color-grey-dark;
     color-scheme: dark;
-    width: 38rem;
+    width: inherit;
 
     &:focus,
     &:required {
@@ -40,8 +75,9 @@
   }
 
   &__btns {
-    margin-top: 3rem;
-    width: 40rem;
+    margin: 3rem 2rem 0 0;
+    align-self: flex-end;
+
     display: flex;
     flex-direction: row-reverse;
     gap: 0 1rem;
