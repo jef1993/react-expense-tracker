@@ -1,0 +1,33 @@
+.banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: 1/1 / span 1/-1;
+
+  &__message {
+    &--right {
+      font-size: $font-size-l;
+      color: $color-grey-xlight;
+      font-weight: $font-regular;
+    }
+
+    &--year {
+      color: $color-white;
+      font-weight: $font-bold;
+    }
+  }
+
+  &__selector {
+    font-size: $font-size-m;
+  }
+}
+
+.select-year {
+  &__box {
+    background-color: $color-black;
+    padding: 0 0.1rem 0 2rem;
+    margin-left: 1rem;
+    font-size: $font-size-m;
+  }
+}

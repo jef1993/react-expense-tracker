@@ -1,7 +1,33 @@
 @mixin flexCenter($dir) {
-    display: flex;
-    flex-direction: $dir;
-    justify-content: center;
-    align-items: center;
-    
+  display: flex;
+  flex-direction: $dir;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin input-1 {
+  height: 3.6rem;
+  border-radius: 0.5rem;
+  border-style: none;
+  width: 30rem;
+  margin: 0;
+  padding: 0 1rem;
+  font-size: 1.6rem;
+
+  &:focus {
+    border: none;
+  }
+}
+
+@mixin btn-s{
+    background-color: $color-grey-light;
+    border: none;
+    border-radius: $corner-radius-main;
+    font-weight: $font-semibold;
+    padding: 0 1.5ch;
+    cursor: pointer;
+
+    &:focus {
+      background-color: $color-primary;
+    }
 }

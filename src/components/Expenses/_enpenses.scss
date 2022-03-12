@@ -1,14 +1,68 @@
-.expense {
-  border-radius: 1rem;
-  background-color: rgb(36, 48, 48);
-  margin-top: 2rem;
-  &__control {
-    height: 15rem;
+.expenses {
+  grid-area: 3/1 / span 1 / span 1;
+
+  &__header-box {
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
   }
 
-  &__items {
+  &__total {
+    font-size: $font-size-m;
+    text-align: end;
+
+    & span {
+      margin-left: 1rem;
+      font-size: $font-size-l;
+      font-weight: $font-semibold;
+    }
+  }
+
+  &__container {
+    width: $container-width-l;
+    height: $container-height-l;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    overflow-y: auto;
+  }
+}
+
+.expense {
+  border-radius: $corner-radius-main;
+  background-color: $color-grey-mid;
+  width: calc(100% - 4rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 7.2rem;
+  padding: 0 2rem;
+
+  &__title {
+    font-size: $font-size-m;
+    font-weight: $font-semibold;
+  }
+
+  &__date {
+    font-size: $font-size-s;
+    color: $color-grey-xlight;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  &__delete {
+    @include btn-s;
+  }
+
+  &__amount {
+    font-size: $font-size-l;
+    font-weight: $font-semibold;
   }
 }

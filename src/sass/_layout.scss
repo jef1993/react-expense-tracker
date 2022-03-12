@@ -1,3 +1,29 @@
 .app {
-  width: 100rem;
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  background-image: linear-gradient(-60deg, $color-bg-2, $color-bg-1);
+  @include flexCenter(row);
+}
+
+.main {
+  @include flexCenter(row);
+  width: min(156rem, calc(100% - 5rem));
+  background-color: $color-black;
+  border-radius: $corner-radius-main;
+  padding: 4rem 0;
+  box-shadow: -2px 6px 20px 3px rgba(#000, 0.4);
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: $container-width-l $container-width-s;
+    grid-template-rows: repeat(3, auto);
+    gap: 0rem 3rem;
+  }
+}
+
+.header {
+  margin-top: auto;
+  margin-bottom: 0.8rem;
+  height: 3rem;
 }

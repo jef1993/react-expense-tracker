@@ -1,4 +1,7 @@
+import React, { useState } from "react";
+
 function Input(props) {
+  const [value, setValue] = useState("");
   return (
     <div className="input">
       <label className="input__label" htmlFor={props.name}>
@@ -8,8 +11,11 @@ function Input(props) {
         className="input__box"
         id={props.name}
         name="new-expense"
-        value={props.value}
         type={props.type}
+        value={value}
+        onChange={(e) => {
+          setValue(e.target.value);
+        }}
         placeholder={props.placeholder}
       ></input>
     </div>

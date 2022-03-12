@@ -1,1 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
+
+
+
+h1 {
+  font-size: $font-size-xl;
+  font-weight: $font-bold;
+}
+
+h2 {
+  font-size: $font-size-m;
+  font-weight: $font-regular;
+  text-transform: capitalize;
+}

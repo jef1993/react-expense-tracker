@@ -1,0 +1,65 @@
+.breakdown {
+  grid-area: 2/1 / span 1 / span 1;
+  &__header {
+    margin-top: 1rem;
+  }
+
+  &__container {
+    border-radius: $corner-radius-main;
+    background-color: $color-grey-mid;
+    width: $container-width-l;
+    height: $container-height-s;
+    @include flexCenter(row);
+    gap: 1rem;
+  }
+}
+
+.meter {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-size: $font-size-s;
+  gap: 0.5rem;
+
+  &__case {
+    height: 18rem;
+    width: 4.2rem;
+    margin-top: 0.5rem;
+    background-color: $color-black;
+    border-radius: $corner-radius-main;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    border: 0.5rem solid $color-black;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  &__fill {
+    // background-color: $color-primary;
+
+    width: 3.2rem;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    position: relative;
+  }
+
+  &__color {
+    height: 17rem;
+    width: 100%;
+    background-image: linear-gradient(
+      0deg,
+      $color-meter-low,
+      $color-meter-mid,
+      $color-meter-high
+    );
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__month {
+    font-size: $font-size-m;
+  }
+}

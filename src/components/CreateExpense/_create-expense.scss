@@ -1,0 +1,53 @@
+.create-expense {
+  grid-area: 3/2 / span 1 / span 1;
+
+  &__header {
+    margin-top: 2rem;
+  }
+
+  &__container {
+    width: $container-width-s;
+    height: $container-height-l;
+    background-color: $color-grey-mid;
+    border-radius: 1.5rem;
+    @include flexCenter(column);
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 40rem;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size-s;
+    gap: 0.5rem;
+  }
+
+  &__selector {
+    @include input-1;
+    background-color: $color-grey-dark;
+    color-scheme: dark;
+    width: 38rem;
+
+    &:focus,
+    &:required {
+      outline: 0.1rem solid $color-primary;
+    }
+  }
+
+  &__btns {
+    margin-top: 3rem;
+    width: 40rem;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 0 1rem;
+  }
+
+  &__btn {
+    @include btn-s;
+  }
+}

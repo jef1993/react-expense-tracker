@@ -5,10 +5,16 @@ $color-primary: #f4cc3e;
 $color-black: #1e1e1e;
 $color-white: #fbf8f2;
 
-$color-grey-light: #969490;
-$color-grey-mid: #4a4a4a;
+$color-grey-xlight: #969490;
+$color-grey-light: #4a4a4a;
+$color-grey-mid: #313235;
 $color-grey-dark: #27282b;
 
+$color-meter-low: #dd912eef;
+$color-meter-mid: #f4cd3e;
+$color-meter-high: rgb(245, 232, 116);
+
+$font-size-xxl: 4.8rem;
 $font-size-xl: 3.6rem;
 $font-size-l: 2.4rem;
 $font-size-m: 1.8rem;
@@ -24,3 +30,6 @@ $container-width-l: 70rem;
 $container-width-s: 45rem;
 $container-height-l: 40rem;
 $container-height-s: 28rem;
+
+$corner-radius-main: 1.5rem;
+$corner-radius-sub: 1rem;

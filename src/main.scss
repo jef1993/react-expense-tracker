@@ -1,6 +1,6 @@
+@import "./sass/variables";
 @import "./sass/mixins";
 @import "./sass/typography";
-@import "./sass/variables";
 @import "./sass/base";
 @import "./sass/layout";
 
@@ -9,3 +9,4 @@
 @import "./components/Overview/overview";
 @import "./components/Expenses/enpenses";
 @import "./components/CreateExpense/create-expense";
+@import "./components/Input/input";
