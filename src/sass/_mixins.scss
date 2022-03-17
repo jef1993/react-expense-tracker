@@ -19,15 +19,16 @@
   }
 }
 
-@mixin btn-s{
-    background-color: $color-grey-light;
-    border: none;
-    border-radius: $corner-radius-main;
-    font-weight: $font-semibold;
-    padding: 0 1.5ch;
-    cursor: pointer;
+@mixin btn-s {
+  background-color: $color-grey-light;
+  border: none;
+  border-radius: $corner-radius-main;
+  font-weight: $font-semibold;
+  font-size: $font-size-m;
+  padding: 0.1ch 1.5ch;
+  cursor: pointer;
 
-    &:focus {
-      background-color: $color-primary;
-    }
+  &:focus {
+    background-color: $color-primary;
+  }
 }

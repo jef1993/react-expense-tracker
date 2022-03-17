@@ -1,3 +1,5 @@
+import Selector from "../Selector/Selector";
+
 function Banner(props) {
   return (
     <div className="banner">
@@ -12,15 +14,11 @@ function Banner(props) {
         <label htmlFor="select-year" className="select-year__label">
           Select year :
         </label>
-        <select
+        <Selector
           name="select-year"
-          id="select-year"
-          className="select-year__box"
-        >
-          <option value="2020">2020</option>
-          <option value="2021">2021</option>
-          <option value="2022">2022</option>
-        </select>
+          classes="select-year__box"
+          options={["2020", "2021", "2022"]}
+        />
       </div>
     </div>
   );

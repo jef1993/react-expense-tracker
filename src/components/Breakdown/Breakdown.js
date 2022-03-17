@@ -6,7 +6,7 @@ function Breakdown() {
       <h2 className="breakdown__header header">Monthly Breakdown</h2>
       <div className="breakdown__container">
         <Meter amount="500" month="Jan" percentage="10" />
-        <Meter amount="500" month="Jan" percentage="10" />
+        <Meter amount="500" month="Feb" percentage="10" />
         <Meter amount="500" month="Jan" percentage="10" />
         <Meter amount="500" month="Jan" percentage="30" />
         <Meter amount="500" month="Jan" percentage="10" />

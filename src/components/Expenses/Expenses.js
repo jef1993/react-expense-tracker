@@ -11,12 +11,36 @@ function Expenses() {
       </div>
 
       <div className="expenses__container">
-        <Expense title="Expense No.1" date="12, Feb, 2022" amount="500" />
-        <Expense title="Expense No.1" date="12, Feb, 2022" amount="500" />
-        <Expense title="Expense No.1" date="12, Feb, 2022" amount="500" />
-        <Expense title="Expense No.1" date="12, Feb, 2022" amount="500" />
-        <Expense title="Expense No.1" date="12, Feb, 2022" amount="500" />
-        <Expense title="Expense No.1" date="12, Feb, 2022" amount="500" />
+        <Expense
+          title="Expense No.1"
+          date={new Date(2022, 1, 12)}
+          amount="500"
+        />
+        <Expense
+          title="Expense No.1"
+          date={new Date(2022, 1, 1)}
+          amount="500"
+        />
+        <Expense
+          title="Expense No.1"
+          date={new Date(2022, 1, 12)}
+          amount="500"
+        />
+        <Expense
+          title="Expense No.1"
+          date={new Date(2022, 1, 12)}
+          amount="500"
+        />
+        <Expense
+          title="Expense No.1"
+          date={new Date(2022, 1, 12)}
+          amount="500"
+        />
+        <Expense
+          title="Expense No.1"
+          date={new Date(2022, 2, 12)}
+          amount="500"
+        />
       </div>
     </section>
   );

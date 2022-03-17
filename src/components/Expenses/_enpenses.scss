@@ -65,15 +65,9 @@
     gap: 3rem;
   }
 
-  &__delete {
+  &__btn {
     @include btn-s;
-    & span {
-      font-weight: $font-semibold;
-
-      @media screen and (max-width: 600px) {
-        display: none;
-      }
-    }
+    text-transform: uppercase;
   }
 
   &__amount {
