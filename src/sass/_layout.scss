@@ -15,7 +15,7 @@
   padding: 4rem 0;
   box-shadow: -2px 6px 20px 3px rgba(#000, 0.4);
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 1000px) {
     min-height: 100vh;
     height: auto;
     width: 100vw;
@@ -29,7 +29,7 @@
     grid-template-rows: repeat(3, auto);
     gap: 0rem 3rem;
 
-    @media screen and (max-width: 900px) {
+    @media screen and (max-width: 1000px) {
       grid-template-columns: auto;
       grid-template-rows: repeat(5, auto);
     }

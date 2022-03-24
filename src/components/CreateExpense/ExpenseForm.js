@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Input from "../Input/Input";
 import Selector from "../Selector/Selector";
 
-function ExpenseForm() {
+function ExpenseForm(props) {
   const defaultData = {
     description: "",
     amount: "",
@@ -28,7 +28,6 @@ function ExpenseForm() {
     });
   };
   const groupHandler = (e) => {
-    console.log(e.target.value);
     setExpense((prev) => {
       return { ...prev, group: e.target.value };
     });
@@ -36,9 +35,7 @@ function ExpenseForm() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-
-    const expenseData = expense;
-    console.log(expenseData);
+    props.onAddExpense(expense);
     setExpense(defaultData);
   };
 
@@ -68,6 +65,7 @@ function ExpenseForm() {
         name="date"
         type="date"
         placeholder=""
+        // onValueChange={dataHandler}
         onChange={dateHandler}
         value={expense.date}
       />

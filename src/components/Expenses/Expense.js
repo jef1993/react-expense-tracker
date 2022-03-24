@@ -6,13 +6,14 @@ function Expense(props) {
     month: "short",
     year: "numeric",
   };
-  const date = props.date.toLocaleString("en-GB", options);
+  const [year, month, day] = props.date.split("-");
+  const date = new Date(year, month - 1, day).toLocaleString("en-GB", options);
   const [title, setTitle] = useState(props.title);
 
   const clickHandler = () => {};
 
   return (
-    <div className="expense">
+    <li className="expense">
       <div className="expense__left">
         <div className="expense__title">{title}</div>
         <div className="expense__date">{date}</div>
@@ -23,7 +24,7 @@ function Expense(props) {
         </button>
         <div className="expense__amount">£ {props.amount}</div>
       </div>
-    </div>
+    </li>
   );
 }
 

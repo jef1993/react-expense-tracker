@@ -1,46 +1,39 @@
 import Expense from "./Expense";
+import NoExpense from "./NoExpense";
 
-function Expenses() {
+function Expenses(props) {
+  const filteredData = props.expenses;
+
+  let expenseObj = <NoExpense />;
+  if (filteredData.length > 0)
+    expenseObj = filteredData.map((obj, i) => (
+      <Expense
+        title={obj.description}
+        date={obj.date}
+        amount={obj.amount}
+        key={`expense--${i}`}
+      />
+    ));
+
   return (
     <section className="expenses">
       <div className="expenses__header-box header">
         <h2 className="expenses__header">Your Expenses</h2>
         <div className="expenses__total">
-          Total:<span>£ 1000</span>
+          Total:
+          <span>
+            £{" "}
+            {filteredData
+              .map((expense) => Number(expense.amount))
+              .reduce((a, c) => {
+                return a + c;
+              }, 0)}
+          </span>
         </div>
       </div>
 
       <div className="expenses__container">
-        <Expense
-          title="Expense No.1"
-          date={new Date(2022, 1, 12)}
-          amount="500"
-        />
-        <Expense
-          title="Expense No.1"
-          date={new Date(2022, 1, 1)}
-          amount="500"
-        />
-        <Expense
-          title="Expense No.1"
-          date={new Date(2022, 1, 12)}
-          amount="500"
-        />
-        <Expense
-          title="Expense No.1"
-          date={new Date(2022, 1, 12)}
-          amount="500"
-        />
-        <Expense
-          title="Expense No.1"
-          date={new Date(2022, 1, 12)}
-          amount="500"
-        />
-        <Expense
-          title="Expense No.1"
-          date={new Date(2022, 2, 12)}
-          amount="500"
-        />
+        <ul className="expenses__list">{expenseObj}</ul>
       </div>
     </section>
   );

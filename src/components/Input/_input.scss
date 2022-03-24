@@ -17,8 +17,7 @@
     width: inherit;
     max-width: 80vw;
 
-    &:focus,
-    &:required {
+    &:focus {
       outline: 0.1rem solid $color-primary;
     }
   }

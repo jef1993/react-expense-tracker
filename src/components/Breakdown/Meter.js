@@ -1,6 +1,6 @@
 function Meter(props) {
   return (
-    <div className="meter">
+    <div className="meter" onClick={props.onClick}>
       <div className="meter__amount">£{props.amount}</div>
       <div className="meter__case">
         <div className="meter__fill" style={{ height: `${props.percentage}%` }}>

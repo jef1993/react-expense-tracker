@@ -1,11 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 function Selector(props) {
-//   const [value, setValue] = useState();
-
-//   const changeHandler = (e) => {
-//     setValue(e.target.value);
-//   };
   return (
     <select
       name={props.name}
