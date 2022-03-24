@@ -42,6 +42,7 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+    overflow-x: hidden;
     gap: 1rem;
   }
 }
@@ -55,6 +56,32 @@
   align-items: center;
   min-height: 7.2rem;
   padding: 0 2rem;
+  // animation: expense 0.5s ease forwards;
+  position: relative;
+  overflow: hidden;
+
+  // @keyframes expense {
+  //   0% {
+  //     transform: translateX(-100%);
+  //     opacity: 0;
+  //   }
+  //   100% {
+  //     transform: translateY(0);
+  //     opacity: 1;
+  //   }
+  // }
+
+  &__group {
+    width: 1rem;
+    height: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  &__left {
+    margin-left: 1rem;
+  }
 
   &__title {
     font-size: $font-size-m;

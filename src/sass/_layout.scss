@@ -45,3 +45,21 @@
   margin-bottom: 0.8rem;
   height: 3rem;
 }
+
+.group {
+  &--1 {
+    background-color: $color-group-1;
+  }
+  &--2 {
+    background-color: $color-group-2;
+  }
+  &--3 {
+    background-color: $color-group-3;
+  }
+  &--4 {
+    background-color: $color-group-4;
+  }
+  &--5 {
+    background-color: $color-group-5;
+  }
+}

@@ -2,6 +2,15 @@ import React from "react";
 import Selector from "../Selector/Selector";
 
 function Banner(props) {
+  const dataYears = props.dataEntry.map((expense) =>
+    new Date(expense.date).getFullYear()
+  );
+
+  const yearOptions =
+    dataYears.length > 0
+      ? [...new Set(dataYears)].sort((a, b) => b - a)
+      : [new Date().getFullYear()];
+
   return (
     <div className="banner">
       <div className="banner__message">
@@ -18,7 +27,7 @@ function Banner(props) {
         <Selector
           name="select-year"
           classes="select-year__box"
-          options={["2020", "2021", "2022"]}
+          options={yearOptions}
           onChange={props.onChange}
           value={props.value}
         />

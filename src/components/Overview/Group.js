@@ -2,7 +2,7 @@ function Group(props) {
   return (
     <div className="group">
       <div className="group__header">
-        <div className="group__color"></div>
+        <div className={`group__color ${props.color}`}></div>
         <div className="group__name">{props.name}</div>
       </div>
       <div className="group__details">

@@ -8,7 +8,7 @@ function ExpenseForm(props) {
     description: "",
     amount: "",
     date: "",
-    group: "Housing & Utilities",
+    group: props.groups[0],
   };
   const [expense, setExpense] = useState(defaultData);
 
@@ -74,13 +74,7 @@ function ExpenseForm(props) {
         <Selector
           name="group"
           classes="create-expense__selector"
-          options={[
-            "Housing & Utilities",
-            "Food",
-            "Transport",
-            "Entertainment",
-            "Others",
-          ]}
+          options={props.groups}
           onChange={groupHandler}
           value={expense.group}
         />

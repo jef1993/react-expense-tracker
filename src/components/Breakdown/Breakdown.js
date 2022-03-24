@@ -1,50 +1,39 @@
 import React from "react";
 import Meter from "./Meter";
-import shortenNum from "../functions";
 
 function Breakdown(props) {
-  const months = [
-    "Jan",
-    "Feb",
-    "Mar",
-    "Apr",
-    "May",
-    "Jun",
-    "Jul",
-    "Aug",
-    "Sep",
-    "Oct",
-    "Nov",
-    "Dec",
+  const chartDataPoints = [
+    { label: "Jan", value: 0 },
+    { label: "Feb", value: 0 },
+    { label: "Mar", value: 0 },
+    { label: "Apr", value: 0 },
+    { label: "May", value: 0 },
+    { label: "Jun", value: 0 },
+    { label: "Jul", value: 0 },
+    { label: "Aug", value: 0 },
+    { label: "Sep", value: 0 },
+    { label: "Oct", value: 0 },
+    { label: "Nov", value: 0 },
+    { label: "Dec", value: 0 },
   ];
 
-  const monthTotal = (index) => {
-    const output = props.expenses
-      .filter((obj) => Number(obj.date.split("-")[1]) - 1 === index)
-      .map((data) => Number(data.amount))
-      .reduce((a, c) => {
-        return a + c;
-      }, 0);
-    return output;
-  };
+  props.dataEntry.forEach((expense) => {
+    const expenseMonth = Number(expense.date.split("-")[1]) - 1;
+    chartDataPoints[expenseMonth].value += Number(expense.amount);
+  });
 
-  const meterPercentage = (i) => {
-    return (monthTotal(i) / props.yearTotal) * 100;
-  };
-
-  const test = () => {
-    console.log(props.yearTotal);
-  };
+  const dataPointValues = props.dataEntry.map((obj) => obj.amount);
+  const maxValue = Math.max(...dataPointValues);
 
   return (
     <div className="breakdown">
       <h2 className="breakdown__header header">Monthly Breakdown</h2>
       <div className="breakdown__container">
-        {months.map((month, i) => (
+        {chartDataPoints.map((month, i) => (
           <Meter
-            amount={shortenNum(monthTotal(i))}
-            month={month}
-            percentage={`${meterPercentage(i) ? meterPercentage(i) : 0}`}
+            value={month.value}
+            month={month.label}
+            maxValue={maxValue}
             key={i}
           />
         ))}

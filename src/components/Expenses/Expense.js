@@ -8,12 +8,13 @@ function Expense(props) {
   };
   const [year, month, day] = props.date.split("-");
   const date = new Date(year, month - 1, day).toLocaleString("en-GB", options);
-  const [title, setTitle] = useState(props.title);
 
+  const [title, setTitle] = useState(props.title);
   const clickHandler = () => {};
 
   return (
     <li className="expense">
+      <div className={`expense__group ${props.group}`}></div>
       <div className="expense__left">
         <div className="expense__title">{title}</div>
         <div className="expense__date">{date}</div>

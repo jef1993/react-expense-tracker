@@ -1,8 +1,8 @@
 import React from "react";
 import ExpenseForm from "./ExpenseForm";
 
+let id = 0;
 function CreateExpense(props) {
-  let id = 0;
   const addExpenseHandler = (enteredData) => {
     const data = {
       ...enteredData,
@@ -15,7 +15,7 @@ function CreateExpense(props) {
     <section className="create-expense">
       <h2 className="create-expense__header header">Create New Expense</h2>
       <div className="create-expense__container">
-        <ExpenseForm onAddExpense={addExpenseHandler} />
+        <ExpenseForm onAddExpense={addExpenseHandler} groups={props.groups} />
       </div>
     </section>
   );

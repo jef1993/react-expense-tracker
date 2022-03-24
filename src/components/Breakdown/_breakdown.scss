@@ -39,8 +39,12 @@
   justify-content: space-between;
   align-items: center;
   font-size: $font-size-s;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 1rem 0;
+
+  @media screen and (max-width: 1000px) {
+    font-size: $font-size-m;
+  }
 
   &__case {
     height: 18rem;
@@ -57,12 +61,11 @@
   }
 
   &__fill {
-    transition: all 0.3s ease;
-
     width: 3.2rem;
     overflow: hidden;
     border-radius: 0.5rem;
     position: relative;
+    transition: all 0.3s ease;
   }
 
   &__color {
@@ -77,9 +80,5 @@
     position: absolute;
     bottom: 0;
     left: 0;
-  }
-
-  &__month {
-    font-size: $font-size-m;
   }
 }

@@ -1,4 +1,4 @@
-function shortenNum(num) {
+function shortenNum(num, digit = 0) {
   const units = ["K", "M", "B", "T"];
   let output = num.toFixed(0);
 
@@ -12,7 +12,9 @@ function shortenNum(num) {
     };
 
     if (num > unitDigi && num >= 10000)
-      output = `${(num / unitDigi).toFixed(fixedDigi(num))}${units[i - 1]}`;
+      output = `${(num / unitDigi).toFixed(fixedDigi(num) + digit)}${
+        units[i - 1]
+      }`;
   }
   return output;
 }

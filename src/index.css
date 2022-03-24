@@ -144,6 +144,22 @@ button {
   height: 3rem;
 }
 
+.group--1 {
+  background-color: #43d9ec;
+}
+.group--2 {
+  background-color: #03940a;
+}
+.group--3 {
+  background-color: #eee01e;
+}
+.group--4 {
+  background-color: #ee27ac;
+}
+.group--5 {
+  background-color: #949494;
+}
+
 .banner {
   display: flex;
   flex-direction: row;
@@ -244,8 +260,13 @@ button {
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
-  gap: 0.5rem;
+  gap: 1rem;
   margin: 1rem 0;
+}
+@media screen and (max-width: 1000px) {
+  .meter {
+    font-size: 1.8rem;
+  }
 }
 .meter__case {
   height: 18rem;
@@ -261,11 +282,11 @@ button {
   overflow: hidden;
 }
 .meter__fill {
-  transition: all 0.3s ease;
   width: 3.2rem;
   overflow: hidden;
   border-radius: 0.5rem;
   position: relative;
+  transition: all 0.3s ease;
 }
 .meter__color {
   height: 17rem;
@@ -274,9 +295,6 @@ button {
   position: absolute;
   bottom: 0;
   left: 0;
-}
-.meter__month {
-  font-size: 1.8rem;
 }
 
 .overview {
@@ -308,29 +326,36 @@ button {
   align-items: center;
 }
 .overview__meter {
-  padding-left: 2rem;
-}
-.overview__meter--outer {
-  height: 20rem;
+  padding: 0 2rem;
   width: 20rem;
-  border-radius: 100rem;
-  background-color: #1e1e1e;
+  position: relative;
+  height: 28rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  margin: 0;
 }
-.overview__meter--inner {
+.overview__backdrop {
+  position: absolute;
+  height: 20rem;
+  width: 20rem;
+  border-radius: 100rem;
+  background-color: #1e1e1e;
+  margin-left: 2rem;
+}
+.overview__cover {
   height: 17.5rem;
   width: 17.5rem;
-  border-radius: inherit;
+  border-radius: 100rem;
+  position: absolute;
   background-color: #313235;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
 }
 .overview__total {
   font-size: 4.2rem;
@@ -345,11 +370,11 @@ button {
 }
 
 .group {
-  padding: 0 2rem;
+  padding-right: 2rem;
   max-width: 20rem;
 }
 .group:not(:last-child) {
-  margin-bottom: 1rem;
+  margin-bottom: 0.6rem;
 }
 .group__header {
   display: flex;
@@ -359,7 +384,6 @@ button {
   height: 1rem;
   width: 1rem;
   border-radius: 10rem;
-  background-color: aqua;
   margin-right: 0.5rem;
 }
 .group__name {
@@ -367,7 +391,7 @@ button {
   font-weight: 600;
 }
 .group__details {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   display: flex;
   justify-content: space-between;
 }
@@ -413,6 +437,7 @@ button {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  overflow-x: hidden;
   gap: 1rem;
 }
 
@@ -425,6 +450,18 @@ button {
   align-items: center;
   min-height: 7.2rem;
   padding: 0 2rem;
+  position: relative;
+  overflow: hidden;
+}
+.expense__group {
+  width: 1rem;
+  height: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.expense__left {
+  margin-left: 1rem;
 }
 .expense__title {
   font-size: 1.8rem;
