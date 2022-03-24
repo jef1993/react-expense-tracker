@@ -31,6 +31,11 @@
   &__container {
     width: $container-width-l;
     height: $container-height-l;
+
+    @media screen and (max-width: 1000px) {
+      height: auto;
+      max-height: $container-height-l;
+    }
   }
 
   &__list {

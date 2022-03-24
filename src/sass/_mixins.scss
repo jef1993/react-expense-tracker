@@ -28,7 +28,7 @@
   padding: 0.1ch 1.5ch;
   cursor: pointer;
 
-  &:focus {
+  &:hover {
     background-color: $color-primary;
   }
 }

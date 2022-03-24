@@ -1,3 +1,4 @@
+import React from "react";
 import Meter from "./Meter";
 import shortenNum from "../functions";
 
@@ -27,11 +28,9 @@ function Breakdown(props) {
     return output;
   };
 
-  // const meterPercentage = (index) => {
-  //   const output = monthTotal(index / props.yearTotal) * 100;
-  //   console.log(output);
-  //   return output;
-  // };
+  const meterPercentage = (i) => {
+    return (monthTotal(i) / props.yearTotal) * 100;
+  };
 
   const test = () => {
     console.log(props.yearTotal);
@@ -45,22 +44,10 @@ function Breakdown(props) {
           <Meter
             amount={shortenNum(monthTotal(i))}
             month={month}
-            percentage={`${(monthTotal(i) / props.yearTotal) * 100}`}
+            percentage={`${meterPercentage(i) ? meterPercentage(i) : 0}`}
             key={i}
           />
         ))}
-        {/* <Meter amount="500" month="Jan" percentage="10" />
-        <Meter amount="500" month="Feb" percentage="10" />
-        <Meter amount="500" month="Jan" percentage="10" />
-        <Meter amount="500" month="Jan" percentage="30" />
-        <Meter amount="500" month="Jan" percentage="10" />
-        <Meter amount="500" month="Jan" percentage="50" />
-        <Meter amount="500" month="Jan" percentage="100" />
-        <Meter amount="500" month="Jan" percentage="92" />
-        <Meter amount="500" month="Jan" percentage="10" />
-        <Meter amount="500" month="Jan" percentage="10" />
-        <Meter amount="500" month="Jan" percentage="5" />
-        <Meter amount="500" month="Jan" percentage="0" /> */}
       </div>
     </div>
   );

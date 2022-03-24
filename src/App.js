@@ -26,6 +26,7 @@ function App() {
 
   const addExpenseHandler = (data) => {
     setExpensesData((prev) => [...prev, data]);
+    setYearFilter(data.date.split("-")[0]);
   };
 
   const yearFilterHandler = (e) => {

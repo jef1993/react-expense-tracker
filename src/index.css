@@ -261,6 +261,7 @@ button {
   overflow: hidden;
 }
 .meter__fill {
+  transition: all 0.3s ease;
   width: 3.2rem;
   overflow: hidden;
   border-radius: 0.5rem;
@@ -402,6 +403,12 @@ button {
   width: min(calc(100vw - 6rem), 70rem);
   height: 40rem;
 }
+@media screen and (max-width: 1000px) {
+  .expenses__container {
+    height: auto;
+    max-height: 40rem;
+  }
+}
 .expenses__list {
   display: flex;
   flex-direction: column;
@@ -442,7 +449,7 @@ button {
   cursor: pointer;
   text-transform: uppercase;
 }
-.expense__btn:focus {
+.expense__btn:hover {
   background-color: #f4cc3e;
 }
 .expense__amount {
@@ -567,7 +574,7 @@ button {
   padding: 0.1ch 1.5ch;
   cursor: pointer;
 }
-.create-expense__btn:focus {
+.create-expense__btn:hover {
   background-color: #f4cc3e;
 }
 
