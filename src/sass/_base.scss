@@ -39,6 +39,8 @@ button {
   @include flexCenter(column);
   margin: 0;
   padding: 0;
+  background-color: $color-grey-dark;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
