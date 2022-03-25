@@ -1,15 +1,13 @@
 import React from "react";
 import ExpenseForm from "./ExpenseForm";
 
-let id = 0;
 function CreateExpense(props) {
   const addExpenseHandler = (enteredData) => {
     const data = {
       ...enteredData,
-      id: id,
+      id: new Date().getTime().toString().padStart(15, "0"),
     };
     props.onAddExpense(data);
-    id++;
   };
   return (
     <section className="create-expense">
