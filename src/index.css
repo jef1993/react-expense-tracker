@@ -28,17 +28,17 @@ html {
 }
 @media screen and (max-width: 1300px) {
   html {
-    font-size: 0.76vw;
+    font-size: 0.77vw;
   }
 }
 @media screen and (max-width: 1000px) {
   html {
-    font-size: min(1.35vw, 62.5%);
+    font-size: min(1.4vw, 62.5%);
   }
 }
 @media screen and (max-width: 600px) {
   html {
-    font-size: 50%;
+    font-size: 56.25%;
   }
 }
 
@@ -455,17 +455,24 @@ button {
 }
 .expense__group {
   width: 1rem;
-  height: 10rem;
+  height: 15rem;
   position: absolute;
   top: 0;
   left: 0;
 }
 .expense__left {
-  margin-left: 1rem;
+  margin: 1rem 0 1rem 1rem;
 }
 .expense__title {
   font-size: 1.8rem;
   font-weight: 600;
+  overflow-wrap: break-word;
+  max-width: 36rem;
+}
+@media screen and (max-width: 1000px) {
+  .expense__title {
+    max-width: 30rem;
+  }
 }
 .expense__date {
   font-size: 1.4rem;
@@ -489,10 +496,26 @@ button {
 .expense__btn:hover {
   background-color: #f4cc3e;
 }
+.expense__btn span {
+  font-weight: 600;
+}
+@media screen and (max-width: 1000px) {
+  .expense__delete {
+    display: none;
+  }
+}
+.expense__symbol {
+  display: none;
+}
+@media screen and (max-width: 1000px) {
+  .expense__symbol {
+    display: initial;
+  }
+}
 .expense__amount {
   font-size: 2.4rem;
   font-weight: 600;
-  min-width: 10ch;
+  min-width: 9ch;
   text-align: right;
 }
 
@@ -502,6 +525,11 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 1000px) {
+  .no-expense {
+    height: 16rem;
+  }
 }
 .no-expense h2 {
   font-size: 2.4rem;
@@ -596,6 +624,7 @@ button {
   outline: 0.1rem solid #f4cc3e;
 }
 .create-expense__btns {
+  grid-column: 1/-1;
   margin: 2rem 2rem 0 0;
   align-self: flex-end;
   display: flex;
@@ -635,6 +664,9 @@ button {
 }
 .input__box:focus {
   outline: 0.1rem solid #f4cc3e;
+}
+.input__box:invalid {
+  outline: 0.1rem solid #4a4a4a;
 }
 
 /*# sourceMappingURL=index.css.map */

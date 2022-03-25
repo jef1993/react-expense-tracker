@@ -2,7 +2,6 @@ import Expense from "./Expense";
 import NoExpense from "./NoExpense";
 
 function Expenses(props) {
-  console.log(props.dataEntry);
   let expenseObj = <NoExpense />;
   if (props.dataEntry.length > 0)
     expenseObj = props.dataEntry.map((obj, i) => (
@@ -12,6 +11,8 @@ function Expenses(props) {
         amount={obj.amount}
         key={`expense--${i}`}
         group={`group--${props.groups.indexOf(obj.group) + 1}`}
+        id={obj.id}
+        onDelete={props.onDelete}
       />
     ));
 

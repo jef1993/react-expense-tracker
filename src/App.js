@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Banner from "./components/Banner/Banner";
 import Breakdown from "./components/Breakdown/Breakdown";
@@ -17,9 +17,18 @@ function App() {
     "Others",
   ];
 
+  useEffect(() => {
+    localStorage.expensesData &&
+      setExpensesData(JSON.parse(localStorage.expensesData));
+  }, []);
+
+  useEffect(() => {
+    localStorage.expensesData = JSON.stringify(expensesData);
+  }, [expensesData]);
+
   const filteredData = expensesData
     .filter((expense) => new Date(expense.date).getFullYear() === yearFilter)
-    .sort((a, b) => new Date(a.date) - new Date(b.date));
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
 
   const yearTotal = filteredData
     .map((obj) => Number(obj.amount))
@@ -36,12 +45,15 @@ function App() {
     setYearFilter(Number(e.target.value));
   };
 
+  const deleteHandler = (id) => {
+    setExpensesData((prev) => prev.filter((obj) => obj.id !== id));
+  };
+
   return (
     <div className="app">
       <div className="main">
         <div className="main__wrapper">
           <Banner
-            username="username"
             onChange={yearFilterHandler}
             value={yearFilter}
             dataEntry={expensesData}
@@ -56,6 +68,7 @@ function App() {
             selectedYr={yearFilter}
             dataEntry={filteredData}
             groups={groups}
+            onDelete={deleteHandler}
           />
           <CreateExpense onAddExpense={addExpenseHandler} groups={groups} />
         </div>

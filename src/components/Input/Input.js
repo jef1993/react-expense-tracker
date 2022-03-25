@@ -13,9 +13,11 @@ function Input(props) {
         type={props.type}
         value={props.value}
         min={props.min}
+        max={props.max}
         step={props.step}
         onChange={props.onChange}
         placeholder={props.placeholder}
+        maxLength="60"
         required
       ></input>
     </div>

@@ -73,19 +73,25 @@
 
   &__group {
     width: 1rem;
-    height: 10rem;
+    height: 15rem;
     position: absolute;
     top: 0;
     left: 0;
   }
 
   &__left {
-    margin-left: 1rem;
+    margin: 1rem 0 1rem 1rem;
   }
 
   &__title {
     font-size: $font-size-m;
     font-weight: $font-semibold;
+    overflow-wrap: break-word;
+    max-width: 36rem;
+
+    @media screen and (max-width: 1000px) {
+      max-width: 30rem;
+    }
   }
 
   &__date {
@@ -102,12 +108,30 @@
   &__btn {
     @include btn-s;
     text-transform: uppercase;
+
+    & span {
+      font-weight: $font-semibold;
+    }
+  }
+
+  &__delete {
+    @media screen and (max-width: 1000px) {
+      display: none;
+    }
+  }
+
+  &__symbol {
+    display: none;
+
+    @media screen and (max-width: 1000px) {
+      display: initial;
+    }
   }
 
   &__amount {
     font-size: $font-size-l;
     font-weight: $font-semibold;
-    min-width: 10ch;
+    min-width: 9ch;
     text-align: right;
   }
 }
@@ -115,6 +139,10 @@
 .no-expense {
   height: $container-height-l;
   @include flexCenter(row);
+
+  @media screen and (max-width: 1000px) {
+    height: 16rem;
+  }
 
   & h2 {
     font-size: $font-size-l;

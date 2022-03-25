@@ -57,6 +57,7 @@ function ExpenseForm(props) {
         type="number"
         placeholder="amount"
         min="0.01"
+        max="99999999"
         step="0.01"
         onChange={amountHandler}
         value={expense.amount}
@@ -65,7 +66,6 @@ function ExpenseForm(props) {
         name="date"
         type="date"
         placeholder=""
-        // onValueChange={dataHandler}
         onChange={dateHandler}
         value={expense.date}
       />

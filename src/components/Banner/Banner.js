@@ -14,7 +14,9 @@ function Banner(props) {
   return (
     <div className="banner">
       <div className="banner__message">
-        <h1 className="banner__message--left">Hi, {props.username}. </h1>
+        <h1 className="banner__message--left">
+          Hello there.
+        </h1>
         <p className="banner__message--right">
           Here is your expenses of{" "}
           <span className="banner__message--year">{props.value}.</span>

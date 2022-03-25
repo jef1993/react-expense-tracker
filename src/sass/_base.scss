@@ -15,13 +15,13 @@ html {
   scroll-behavior: smooth;
 
   @media screen and (max-width: 1300px) {
-    font-size: 0.76vw;
+    font-size: 0.77vw;
   }
   @media screen and (max-width: 1000px) {
-    font-size: min(1.35vw, 62.5%);
+    font-size: min(1.4vw, 62.5%);
   }
   @media screen and (max-width: 600px) {
-    font-size: 50%;
+    font-size: 56.25%;
   }
 }
 
