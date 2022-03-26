@@ -12,7 +12,7 @@ function shortenNum(num, digit = 0) {
     };
 
     if (num > unitDigi && num >= 10000)
-      output = `${(num / unitDigi).toFixed(fixedDigi(num) + digit)}${
+      output = `${Number((num / unitDigi).toFixed(fixedDigi(num) + digit))}${
         units[i - 1]
       }`;
   }
