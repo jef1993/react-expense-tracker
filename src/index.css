@@ -38,7 +38,7 @@ html {
 }
 @media screen and (max-width: 600px) {
   html {
-    font-size: 56.25%;
+    font-size: min(2vw, 56.25%);
   }
 }
 

@@ -21,7 +21,7 @@ html {
     font-size: min(1.4vw, 62.5%);
   }
   @media screen and (max-width: 600px) {
-    font-size: 56.25%;
+    font-size: min(2vw, 56.25%);
   }
 }
 
