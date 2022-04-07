@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import Selector from "../Selector/Selector";
+import ExpensesContext from "../storage/expensesContext";
 
 function Banner(props) {
-  const dataYears = props.dataEntry.map((expense) =>
+  const ctx = useContext(ExpensesContext);
+  const dataYears = ctx.data.map((expense) =>
     new Date(expense.date).getFullYear()
   );
 
@@ -14,9 +16,7 @@ function Banner(props) {
   return (
     <div className="banner">
       <div className="banner__message">
-        <h1 className="banner__message--left">
-          Hello there.
-        </h1>
+        <h1 className="banner__message--left">Hello there.</h1>
         <p className="banner__message--right">
           Here is your expenses of{" "}
           <span className="banner__message--year">{props.value}.</span>

@@ -1,10 +1,13 @@
+import React, { useContext } from "react";
+
 import Group from "./Group";
 import shortenNum from "../functions";
-import React from "react";
 import { Chart as ChartJS, ArcElement } from "chart.js";
 import { Doughnut } from "react-chartjs-2";
+import ExpensesContext from "../storage/expensesContext";
 
 function Overview(props) {
+  const ctx = useContext(ExpensesContext);
   const groupsData = props.groups.map((el) => {
     const data = {};
     data.name = el;
@@ -12,7 +15,7 @@ function Overview(props) {
     return data;
   });
 
-  props.dataEntry.forEach((data) => {
+  ctx.filteredData.forEach((data) => {
     groupsData[groupsData.map((obj) => obj.name).indexOf(data.group)].value +=
       Number(data.amount);
   });

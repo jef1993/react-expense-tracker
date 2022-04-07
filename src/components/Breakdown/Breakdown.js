@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import Meter from "./Meter";
+import ExpensesContext from "../storage/expensesContext";
 
 function Breakdown(props) {
+  const ctx = useContext(ExpensesContext);
   const chartDataPoints = [
     { label: "Jan", value: 0 },
     { label: "Feb", value: 0 },
@@ -17,12 +19,12 @@ function Breakdown(props) {
     { label: "Dec", value: 0 },
   ];
 
-  props.dataEntry.forEach((expense) => {
+  ctx.filteredData.forEach((expense) => {
     const expenseMonth = Number(expense.date.split("-")[1]) - 1;
     chartDataPoints[expenseMonth].value += Number(expense.amount);
   });
 
-  const dataPointValues = props.dataEntry.map((obj) => obj.amount);
+  const dataPointValues = ctx.filteredData.map((obj) => obj.amount);
   const maxValue = Math.max(...dataPointValues);
 
   return (

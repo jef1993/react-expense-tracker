@@ -1,10 +1,14 @@
+import React, { useContext } from "react";
 import Expense from "./Expense";
 import NoExpense from "./NoExpense";
+import ExpensesContext from "../storage/expensesContext";
 
 function Expenses(props) {
+  const ctx = useContext(ExpensesContext);
+
   let expenseObj = <NoExpense />;
-  if (props.dataEntry.length > 0)
-    expenseObj = props.dataEntry.map((obj, i) => (
+  if (ctx.filteredData.length > 0)
+    expenseObj = ctx.filteredData.map((obj, i) => (
       <Expense
         title={obj.description}
         date={obj.date}
@@ -24,7 +28,7 @@ function Expenses(props) {
           Total:
           <span>
             £{" "}
-            {props.dataEntry
+            {ctx.filteredData
               .map((expense) => Number(expense.amount))
               .reduce((a, c) => {
                 return a + c;
