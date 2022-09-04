@@ -83,8 +83,9 @@ button {
 
 ::-webkit-scrollbar-thumb {
   border-radius: 1.5rem;
-  border: 0.5rem solid #1e1e1e;
+  border: 0.5rem solid transparent;
   background: #313235;
+  background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -107,7 +108,7 @@ button {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  width: min(156rem, calc(100% - 5rem));
+  width: min(156rem, 100% - 5rem);
   background-color: #1e1e1e;
   border-radius: 1.5rem;
   padding: 4rem 0;
@@ -138,7 +139,7 @@ button {
 }
 @media screen and (max-width: 600px) {
   .main__wrapper {
-    width: min(calc(100vw - 6rem), 70rem);
+    width: min(100vw - 6rem, 70rem);
   }
 }
 
@@ -149,19 +150,19 @@ button {
 }
 
 .group--1 {
-  background-color: #43d9ec;
+  background-color: rgb(67, 217, 236);
 }
 .group--2 {
-  background-color: #03940a;
+  background-color: rgb(3, 148, 10);
 }
 .group--3 {
-  background-color: #eee01e;
+  background-color: rgb(238, 224, 30);
 }
 .group--4 {
-  background-color: #ee27ac;
+  background-color: rgb(238, 39, 172);
 }
 .group--5 {
-  background-color: #949494;
+  background-color: rgb(148, 148, 148);
 }
 
 .banner {
@@ -241,7 +242,7 @@ button {
 .breakdown__container {
   border-radius: 1.5rem;
   background-color: #313235;
-  width: min(calc(100vw - 6rem), 70rem);
+  width: min(100vw - 6rem, 70rem);
   min-height: 28rem;
   display: flex;
   flex-direction: row;
@@ -254,7 +255,7 @@ button {
   .breakdown__container {
     display: grid;
     grid-template-columns: repeat(6, auto);
-    width: min(calc(100vw - 6rem), 45rem);
+    width: min(100vw - 6rem, 45rem);
   }
 }
 
@@ -295,7 +296,7 @@ button {
 .meter__color {
   height: 17rem;
   width: 100%;
-  background-image: linear-gradient(0deg, #dd912eef, #f4cd3e, #f5e874);
+  background-image: linear-gradient(0deg, rgba(221, 145, 46, 0.937254902), #f4cd3e, rgb(245, 232, 116));
   position: absolute;
   bottom: 0;
   left: 0;
@@ -317,13 +318,13 @@ button {
 }
 @media screen and (max-width: 1000px) {
   .overview__header {
-    width: min(calc(100vw - 6rem), 70rem);
+    width: min(100vw - 6rem, 70rem);
   }
 }
 .overview__container {
   border-radius: 1.5rem;
   background-color: #313235;
-  width: min(calc(100vw - 6rem), 45rem);
+  width: min(100vw - 6rem, 45rem);
   height: 28rem;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -416,7 +417,7 @@ button {
   align-items: center;
   justify-content: space-between;
   height: 3rem;
-  width: min(calc(100vw - 6rem), 70rem);
+  width: min(100vw - 6rem, 70rem);
 }
 .expenses__total {
   font-size: 1.8rem;
@@ -428,8 +429,10 @@ button {
   font-weight: 600;
 }
 .expenses__container {
-  width: min(calc(100vw - 6rem), 70rem);
+  width: min(100vw - 6rem, 70rem);
   height: 40rem;
+  overflow-y: auto;
+  max-height: 40rem;
 }
 @media screen and (max-width: 1000px) {
   .expenses__container {
@@ -556,11 +559,11 @@ button {
 }
 @media screen and (max-width: 1000px) {
   .create-expense__header {
-    width: min(calc(100vw - 6rem), 70rem);
+    width: min(100vw - 6rem, 70rem);
   }
 }
 .create-expense__container {
-  width: min(calc(100vw - 6rem), 45rem);
+  width: min(100vw - 6rem, 45rem);
   height: 40rem;
   background-color: #313235;
   border-radius: 1.5rem;
@@ -571,7 +574,7 @@ button {
 }
 @media screen and (max-width: 1000px) {
   .create-expense__container {
-    width: min(calc(100vw - 6rem), 70rem);
+    width: min(100vw - 6rem, 70rem);
     height: 28rem;
   }
 }
@@ -584,11 +587,11 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
-  width: min(calc(100vw - 6rem), 45rem);
+  width: min(100vw - 6rem, 45rem);
 }
 @media screen and (max-width: 1000px) {
   .create-expense__form {
-    width: min(calc(100vw - 6rem), 70rem);
+    width: min(100vw - 6rem, 70rem);
     grid-template-columns: 1fr 1fr;
   }
 }

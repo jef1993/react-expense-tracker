@@ -31,6 +31,8 @@
   &__container {
     width: $container-width-l;
     height: $container-height-l;
+    overflow-y: auto;
+    max-height: 7.2rem * 5 + 1rem * 4;
 
     @media screen and (max-width: 1000px) {
       height: auto;
