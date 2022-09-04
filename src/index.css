@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap");
 h1 {
-  font-size: 3.6rem;
+  font-size: 3.2rem;
   font-weight: 700;
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   text-transform: capitalize;
 }
@@ -90,6 +90,7 @@ button {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #27282b;
+  background-clip: content-box;
 }
 
 .app {
@@ -111,9 +112,9 @@ button {
   width: min(156rem, 100% - 5rem);
   background-color: #1e1e1e;
   border-radius: 1.5rem;
-  padding: 4rem 0;
+  padding: 2rem 0 3rem;
   box-shadow: -2px 6px 20px 3px rgba(0, 0, 0, 0.4);
-  margin: 2rem 0;
+  margin: 1rem 0;
 }
 @media screen and (max-width: 1000px) {
   .main {
@@ -186,17 +187,17 @@ button {
 }
 @media screen and (max-width: 1000px) {
   .banner__message--left {
-    font-size: 2.4rem;
+    font-size: 2rem;
   }
 }
 .banner__message--right {
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #969490;
   font-weight: 400;
 }
 @media screen and (max-width: 1000px) {
   .banner__message--right {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 .banner__message--year {
@@ -204,7 +205,7 @@ button {
   font-weight: 700;
 }
 .banner__selector {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 @media screen and (max-width: 1000px) {
@@ -216,7 +217,7 @@ button {
   background-color: #1e1e1e;
   padding: 0 0.1rem 0 2rem;
   margin-left: 1rem;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
 }
 
 .breakdown {
@@ -231,7 +232,7 @@ button {
   }
 }
 .breakdown__header {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   align-self: flex-start;
 }
 @media screen and (max-width: 1000px) {
@@ -270,7 +271,7 @@ button {
 }
 @media screen and (max-width: 1000px) {
   .meter {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 }
 .meter__case {
@@ -314,7 +315,7 @@ button {
   }
 }
 .overview__header {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 }
 @media screen and (max-width: 1000px) {
   .overview__header {
@@ -363,11 +364,11 @@ button {
   justify-content: center;
 }
 .overview__total {
-  font-size: 4.2rem;
+  font-size: 3.6rem;
   font-weight: 700;
 }
 .overview__letter {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   position: absolute;
   bottom: 20%;
   left: 50%;
@@ -420,12 +421,12 @@ button {
   width: min(100vw - 6rem, 70rem);
 }
 .expenses__total {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   text-align: end;
 }
 .expenses__total span {
   margin-left: 1rem;
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 .expenses__container {
@@ -471,7 +472,7 @@ button {
   margin: 1rem 0 1rem 1rem;
 }
 .expense__title {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 600;
   overflow-wrap: break-word;
   max-width: 36rem;
@@ -495,7 +496,7 @@ button {
   border: none;
   border-radius: 1.5rem;
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding: 0.1ch 1.5ch;
   cursor: pointer;
   text-transform: uppercase;
@@ -520,7 +521,7 @@ button {
   }
 }
 .expense__amount {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 600;
   min-width: 9ch;
   text-align: right;
@@ -539,7 +540,7 @@ button {
   }
 }
 .no-expense h2 {
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 600;
 }
 
@@ -643,7 +644,7 @@ button {
   border: none;
   border-radius: 1.5rem;
   font-weight: 600;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding: 0.1ch 1.5ch;
   cursor: pointer;
 }

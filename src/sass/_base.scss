@@ -60,4 +60,5 @@ button {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: $color-grey-dark;
+  background-clip: content-box;
 }
